@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Yoonhak Nam — CV</title>
+    <style>
+      @page { size: A4; margin: 0; }
+      * { box-sizing: border-box; }
+      html, body { margin: 0; width: 210mm; min-height: 297mm; }
+      body {
+        color: #202326;
+        background: #fff;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 10pt;
+        line-height: 1.4;
+      }
+      a { color: inherit; text-decoration: none; }
+      p, h1, h2, h3, ul { margin-top: 0; }
+      .page {
+        width: 210mm;
+        height: 297mm;
+        padding: 11mm 12.5mm 9mm;
+        overflow: hidden;
+      }
+      header {
+        margin-bottom: 5mm;
+        padding-bottom: 3.5mm;
+        border-bottom: 0.35mm solid #cbd3d8;
+      }
+      h1 {
+        margin-bottom: 1.2mm;
+        font-size: 32pt;
+        letter-spacing: 0.035em;
+        line-height: 1;
+        text-transform: uppercase;
+      }
+      .contact { margin: 0; color: #4a5359; font-size: 8.8pt; }
+      .layout {
+        display: grid;
+        grid-template-columns: minmax(0, 2.15fr) minmax(0, 0.92fr);
+        gap: 5.2mm;
+      }
+      aside {
+        padding-left: 4mm;
+        border-left: 0.3mm solid #cbd3d8;
+      }
+      section { margin-bottom: 4.5mm; }
+      h2 {
+        margin-bottom: 2.3mm;
+        padding-left: 2.5mm;
+        border-left: 1.4mm solid #0077b5;
+        color: #006ca8;
+        font-size: 13.1pt;
+        line-height: 1.1;
+      }
+      h3 {
+        margin-bottom: 0.6mm;
+        font-size: 10.1pt;
+        line-height: 1.2;
+      }
+      .summary { margin-bottom: 0; text-align: justify; }
+      .entry { margin-bottom: 2.8mm; break-inside: avoid; }
+      .entry-head {
+        display: flex;
+        margin-bottom: 0.6mm;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 3mm;
+      }
+      .date { color: #68747b; font-size: 8.4pt; white-space: nowrap; }
+      .subline { margin-bottom: 1mm; color: #48535a; }
+      ul { margin-bottom: 0; padding-left: 4.2mm; }
+      li { margin-bottom: 0.8mm; }
+      .publication { margin-bottom: 2mm; }
+      .publication p { margin: 0; }
+      .publication .venue { color: #4f5c63; font-style: italic; }
+      .compact p { margin-bottom: 1.3mm; }
+      .compact strong { color: #202326; }
+      .skills {
+        display: flex;
+        margin: 0;
+        padding: 0;
+        flex-wrap: wrap;
+        gap: 1mm;
+        list-style: none;
+      }
+      .skills li {
+        margin: 0;
+        padding: 0.7mm 1.2mm;
+        border: 0.25mm solid #c8d4da;
+      }
+      .note { color: #68747b; font-size: 8.2pt; }
+      .early {
+        margin-top: 1mm;
+        margin-bottom: 0;
+        color: #72a9c4;
+        font-size: 8.2pt;
+        font-weight: 600;
+        letter-spacing: 0.01em;
+      }
+      .education-date {
+        margin-bottom: 1mm;
+        color: #68747b;
+        font-size: 8.4pt;
+      }
+      .award-link {
+        color: #006ca8;
+        text-decoration: underline;
+        text-decoration-thickness: 0.2mm;
+        text-underline-offset: 0.45mm;
+      }
+      @media screen {
+        body { background: #d9dde0; }
+        .page { margin: 8mm auto; background: #fff; box-shadow: 0 2mm 8mm #0003; }
+      }
+      @media print {
+        .page { margin: 0; }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <header>
+        <h1>Yoonhak Nam</h1>
+        <p class="contact">
+          yh.nam.stoic@gmail.com · linkedin.com/in/yoonhak-nam · github.com/StoicJHS
+        </p>
+      </header>
+
+      <div class="layout">
+        <div>
+          <section>
+            <h2>Profile</h2>
+            <p class="summary">
+              Quantitative researcher with a background in nuclear theory, neutron-star
+              cooling, scientific computing, and data-driven optimization. Currently
+              Research Lead at SPEQTRA Investment Research Pte Ltd.
+            </p>
+          </section>
+
+          <section>
+            <h2>Experience</h2>
+            <article class="entry">
+              <div class="entry-head">
+                <h3>SPEQTRA Investment Research Pte Ltd · Research Lead</h3>
+                <span class="date">Jul. 2026 — Present</span>
+              </div>
+              <ul>
+                <li>Leading quantitative research and systematic investment analysis.</li>
+              </ul>
+            </article>
+            <article class="entry">
+              <div class="entry-head">
+                <h3>SPEQTRA Investment Research Pte Ltd · Quantitative Research Intern</h3>
+                <span class="date">Jul. 2025 — Jun. 2026</span>
+              </div>
+              <ul>
+                <li>Conducted quantitative research and systematic strategy development.</li>
+              </ul>
+            </article>
+            <article class="entry">
+              <div class="entry-head">
+                <h3>Matsuo Institute, Inc. · Quantitative Research Intern</h3>
+                <span class="date">Oct. 2024 — Jun. 2025</span>
+              </div>
+              <ul>
+                <li>Built Python tools for backtesting and evaluating CTA strategies.</li>
+                <li>Implemented trading algorithms from academic and financial literature.</li>
+                <li>Developed a research database from public data and web sources.</li>
+              </ul>
+            </article>
+          </section>
+
+          <section>
+            <h2>Publications</h2>
+            <article class="publication">
+              <p><strong>Y. Nam</strong> and K. Sekizawa, “Data-driven exploration of the neutron
+                ³P₂ pairing gap using Cassiopeia A neutron star observational data:
+                Direct χ² minimization.”</p>
+              <p class="venue">Physical Review C 113, 045807 (2026).</p>
+            </article>
+            <article class="publication">
+              <p><strong>Y. Nam</strong> and K. Sekizawa, “Vortex Creep Heating in Neutron Star
+                Cooling: New Insights into Thermal Evolution of Heavy Neutron Stars.”</p>
+              <p class="venue">Proceedings of INPC2025 (2025); arXiv:2510.24167.</p>
+            </article>
+            <article class="publication">
+              <p>T. Lee, <strong>Y. Nam</strong>, and K. Sekizawa, “Impact of hyperon mixing on
+                neutron star structure based on Skyrme-type equations of state.”</p>
+              <p class="venue">arXiv:2605.28727 (2026).</p>
+            </article>
+            <article class="publication">
+              <p><strong>Y. Nam</strong> and K. Sekizawa, “Vortex creep heating in neutron star
+                cooling with direct Urca processes in heavy neutron stars.”</p>
+              <p class="venue">arXiv:2511.13263 (2025).</p>
+            </article>
+          </section>
+
+          <section>
+            <h2>Award</h2>
+            <article class="entry">
+              <div class="entry-head">
+                <h3>
+                  <a
+                    class="award-link"
+                    href="https://gci2.t.u-tokyo.ac.jp/student"
+                  >Award of Excellence · GCI 2023 Winter ↗</a>
+                </h3>
+                <span class="date">Feb. 2024</span>
+              </div>
+              <ul>
+                <li>Top 38 of 2,424 participants in the University of Tokyo–hosted program.</li>
+                <li>Completed machine-learning and data-driven business projects in Python.</li>
+              </ul>
+            </article>
+          </section>
+        </div>
+
+        <aside>
+          <section>
+            <h2>Education</h2>
+            <article class="entry">
+              <h3>Institute of Science Tokyo</h3>
+              <p class="subline">M.S. in Physics · Nuclear Theory<br />GPA 4.21 / 4.50</p>
+              <p class="education-date">Oct. 2024 — Jun. 2026</p>
+              <p>Neutron-star cooling, nuclear superfluidity, and data-driven optimization.</p>
+              <p class="early">Completed M.S. 3 months ahead of schedule</p>
+            </article>
+            <article class="entry">
+              <h3>Tokyo Institute of Technology</h3>
+              <p class="subline">B.S. in Physics · GPA 4.17 / 4.50</p>
+              <p class="education-date">
+                Apr. 2019 — Sep. 2024<br />
+                Military service: Apr. 2020 — Mar. 2022
+              </p>
+              <p>Japan–Korea Joint Scholarship Program for Science and Engineering Students.</p>
+              <p class="early">Completed B.S. 6 months ahead of schedule · 7 semesters</p>
+            </article>
+          </section>
+
+          <section class="compact">
+            <h2>Languages</h2>
+            <p><strong>Korean</strong> · Native</p>
+            <p><strong>Japanese</strong> · Native<br /><span class="note">JLPT N1 180/180</span></p>
+            <p><strong>English</strong> · Proficient<br /><span class="note">TOEIC 960/990</span></p>
+            <p><strong>Chinese</strong> · Beginner</p>
+          </section>
+
+          <section>
+            <h2>Technical Skills</h2>
+            <ul class="skills">
+              <li>Python</li>
+              <li>Fortran</li>
+              <li>Scientific Computing</li>
+              <li>Data Analysis</li>
+            </ul>
+          </section>
+
+          <section class="compact">
+            <h2>Interests</h2>
+            <p>Quantitative Research</p>
+            <p>Market Microstructure</p>
+            <p>Physics-Inspired Modeling</p>
+            <p>High-Performance Computing</p>
+          </section>
+        </aside>
+      </div>
+    </main>
+  </body>
+</html>

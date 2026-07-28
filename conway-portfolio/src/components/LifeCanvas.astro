@@ -1,0 +1,14 @@
+<canvas id="life-field" aria-hidden="true"></canvas>
+
+<script>
+  const canvas = document.querySelector<HTMLCanvasElement>('#life-field');
+  if (canvas) {
+    const { LifeField } = await import('./LifeField');
+    const field = new LifeField(canvas);
+    field.start();
+
+    document.addEventListener('astro:before-swap', () => field.dispose(), {
+      once: true,
+    });
+  }
+</script>

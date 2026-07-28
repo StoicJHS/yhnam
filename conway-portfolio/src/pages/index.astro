@@ -1,0 +1,141 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import LifeCanvas from '../components/LifeCanvas.astro';
+import { profile, publicationGroups } from '../data/profile';
+
+const base = `${import.meta.env.BASE_URL.replace(/\/$/, '')}/`;
+const withBase = (path: string) => `${base}${path.replace(/^\//, '')}`;
+---
+
+<BaseLayout
+  title={`${profile.name} — Nuclear Astrophysics`}
+  description="Publications and curriculum vitae of Yoonhak Nam, a researcher in nuclear astrophysics and neutron-star physics."
+>
+  <LifeCanvas />
+  <div class="ambient-shade" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <a class="monogram" href="#top" aria-label="Back to top">YN</a>
+    <nav aria-label="Primary navigation">
+      <a href="#publications">Publications</a>
+      <details class="cv-menu">
+        <summary>CV</summary>
+        <div>
+          <a href={withBase(profile.links.cv)}>View CV <span aria-hidden="true">↗</span></a>
+          <a href={withBase(profile.links.cv)} download>
+            Download PDF <span aria-hidden="true">↓</span>
+          </a>
+        </div>
+      </details>
+    </nav>
+  </header>
+
+  <main id="content">
+    <section class="hero" id="top">
+      <h1>{profile.name}</h1>
+      <p class="role">{profile.role}</p>
+      <p class="introduction">
+        {profile.introduction}
+        <a href="#publications">
+          Selected work from my master’s research appears below.
+          <span aria-hidden="true">↓</span>
+        </a>
+      </p>
+      <div class="hero-links">
+        <a class="primary-link" href="#publications">Publications <span>↓</span></a>
+        <a href={withBase(profile.links.cv)}>CV</a>
+        <a href={`mailto:${profile.email}`}>Email</a>
+        <a href={profile.links.github} rel="me noreferrer">GitHub</a>
+        <a href={profile.links.linkedin} rel="me noreferrer">LinkedIn</a>
+      </div>
+    </section>
+
+    <section class="publications-section" id="publications">
+      <div class="section-heading">
+        <h2>Publications</h2>
+      </div>
+
+      <div class="publication-groups">
+        {
+          publicationGroups.map((group) => (
+            <section class="publication-group" aria-labelledby={`group-${group.label.toLowerCase().replaceAll(' ', '-')}`}>
+              <h3 id={`group-${group.label.toLowerCase().replaceAll(' ', '-')}`}>
+                <span>{group.label}</span>
+                <span>{String(group.publications.length).padStart(2, '0')}</span>
+              </h3>
+
+              <div class="publication-list">
+                {
+                  group.publications.map((publication) => (
+                    <article class="publication-card">
+                      <a
+                        class="paper-figure"
+                        href={publication.links[0].href}
+                        rel="noreferrer"
+                        aria-label={`Open ${publication.title}`}
+                      >
+                        <img
+                          src={withBase(publication.image)}
+                          alt={publication.imageAlt}
+                          loading="lazy"
+                          decoding="async"
+                        />
+                      </a>
+
+                      <div class="paper-details">
+                        <p class="paper-year">{publication.year}</p>
+                        <h4>
+                          <a href={publication.links[0].href} rel="noreferrer">
+                            {publication.title}
+                          </a>
+                        </h4>
+                        <p class="paper-authors">
+                          {
+                            publication.authors.map((author, index) => (
+                              <>
+                                {index > 0 && ', '}
+                                {author === profile.name ? <strong>{author}</strong> : author}
+                              </>
+                            ))
+                          }
+                        </p>
+                        <p class="paper-venue">{publication.venue}</p>
+                        <p class="paper-status">{publication.status}</p>
+                        <div class="paper-links">
+                          {
+                            publication.links.map((link) => (
+                              <a href={link.href} rel="noreferrer">
+                                {link.label} <span aria-hidden="true">↗</span>
+                              </a>
+                            ))
+                          }
+                        </div>
+                      </div>
+                    </article>
+                  ))
+                }
+              </div>
+            </section>
+          ))
+        }
+      </div>
+    </section>
+
+    <section class="cv-section" id="cv">
+      <div class="cv-copy">
+        <h2>CV</h2>
+        <p>A concise record of quantitative research, education, and publications.</p>
+      </div>
+      <div class="cv-links">
+        <a class="primary-link" href={withBase(profile.links.cv)}>View CV <span>↗</span></a>
+        <a href={withBase(profile.links.cv)} download>Download PDF <span>↓</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Yoonhak Nam</p>
+    <p>Conway’s Game of Life · 2026</p>
+    <a href="#top">Top ↑</a>
+  </footer>
+</BaseLayout>
