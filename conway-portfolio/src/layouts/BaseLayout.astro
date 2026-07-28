@@ -7,8 +7,6 @@ interface Props {
 }
 
 const { title, description } = Astro.props;
-const base = `${import.meta.env.BASE_URL.replace(/\/$/, '')}/`;
-const favicon = `${base}icons/favicon.svg`;
 ---
 
 <!doctype html>
@@ -21,7 +19,6 @@ const favicon = `${base}icons/favicon.svg`;
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
-    <link rel="icon" type="image/svg+xml" href={favicon} />
     <title>{title}</title>
   </head>
   <body>
